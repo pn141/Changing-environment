@@ -1,25 +1,25 @@
 # Changing-environment
-A script to be able to switch from say a Flask dev environment to a test environment. It was written with [Flask-playground](https://github.com/pn141/Flask-Playground) in mind but if you have a Flask application that uses a .env file to store Flask configuration variables, you shouldn't have any problems using it.
+A script to be able to switch from say a Flask dev environment to a test environment. It was written with [Flask_playground](https://github.com/pn141/Flask_Playground) in mind but if you have a Flask application that uses a .env file to store Flask configuration variables, you shouldn't have any problems using it.
 
 ## Installation instructions
  - Clone the project in a temporary location:
 
 ```git clone https://github.com/pn141/Changing-environment```
 
- - This will create directory "Changing-environment", copy "change_app_context.py" and "helper_func.py" at the root of "Flask-playground" or at the root of your Flask application directory.
+ - This will create directory "Changing-environment", copy "change_app_context.py" and "helper_func.py" at the root of "Flask_playground" or at the root of your Flask application directory.
  
 ## Running the script
 The script is looking for a couple of files:
- - Your Flask app file which in the case of "Flask-playground" is called "flask-playground.py"
- - A ".env" file which would also be located at the root "Flask-playground"
+ - Your Flask app file which in the case of "Flask_playground" is called "flask_playground.py"
+ - A ".env" file which would also be located at the root "Flask_playground"
  
 Start your virtual environment, opened up a command line at that location and type the following:
 
-```python change_app_context.py -a flask-playground.py -c development -n testing```
+```python change_app_context.py -a flask_playground.py -c development -n testing```
 
 The above command will change your Flask environment from "development" to "testing". You are now ready to start your Flask application. If you wanted to revert the changes and fall back to your "development" environment, stop Flask and run:
 
-```python change_app_context.py -a flask-playground.py -c testing -n development```
+```python change_app_context.py -a flask_playground.py -c testing -n development```
 
 ## Known limitations:
 - The script does not allow to specify a different location for the Flask app file or the .env. If these files are not located in the directory where the script is run, the command will likely fail.
