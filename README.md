@@ -13,7 +13,7 @@ The script is looking for a couple of files:
  - Your Flask app file which in the case of "Flask-playground" is called "flask-playground.py"
  - A ".env" file which would also be located at the root "Flask-playground"
  
-Start your virtual environment and opened up a command line at that location and type the following:
+Start your virtual environment, opened up a command line at that location and type the following:
 
 ```python change_app_context.py -a flask-playground.py -c development -n testing```
 
